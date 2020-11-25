@@ -9,7 +9,7 @@
     "tsc:watch": "tsc --watch"
   },
   "dependencies": {
-    "lit-bloc-js": "^1.0.6",
+    "lit-bloc-js": "^1.0.8",
     "lit-html": "^1.3.0"
   },
   "devDependencies": {
