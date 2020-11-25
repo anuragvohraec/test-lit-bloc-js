@@ -1,5 +1,5 @@
 import {Bloc, BlocsProvider, BlocBuilder} from 'lit-bloc-js';
-import {html} from 'lit-html';
+import {html, TemplateResult} from 'lit-html';
 
 export class CounterBloc extends Bloc<number>{
 
@@ -44,7 +44,9 @@ export class CounterBlocBuilder extends BlocBuilder<CounterBloc, number>{
     this.bloc?.decrement();
   }
 
-  builder(state: number){
+  builder(state: number): TemplateResult{
+    console.log("building");
+    
       return html`
       <div>Current state is : ${state}</div>
       <div><button @click=${this.increment}>increment</button></div>
